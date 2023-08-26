@@ -76,8 +76,11 @@ const Table = () => {
                     <tfoot>
                         <tr className='p-5' style={{ padding: "20px" }}>
                             <td style={{ height: "2.5rem" }}></td>
-                            <span style={{ position: 'absolute', right: "153px" }}>Row per page:</span>
-                            <span style={{ position: 'absolute', right: "273px" }}> Pages: 1 - 10 of 854</span>
+                            <td style={{ paddingBottom: "2rem" }}>
+                                <span style={{ position: 'absolute', right: "153px" }}>Row per page:</span>
+                                <span style={{ position: 'absolute', right: "273px" }}> Pages: 1 - 10 of 854</span>
+
+                            </td>
                         </tr>
                     </tfoot>
                 </table>
