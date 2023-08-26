@@ -24,7 +24,7 @@ const Table = () => {
             <br />
 
             <div className="table table-desktop">
-                <table className="table bg-white">
+                <table className="table">
                     <thead>
                         <tr>
                             <th scope="col">Name</th>
@@ -72,57 +72,53 @@ const Table = () => {
                                 </tr>
                             })
                         }
-
-
-
-                        {/* <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td className="align-middle text-center">
-                            </td>
-                            <td className="text-right d-flex" style={{ height: "50px", justifyItems: "center", alignItems: "center" }}>
-                                <span className='m-3'>Row per page:</span>
-                                <span> Pages: 1 - 10 of 854</span>
-                            </td>
-                        </tr> */}
-
                     </tbody>
+                    <tfoot>
+                        <tr className='p-5' style={{ padding: "20px" }}>
+                            <td style={{ height: "2.5rem" }}></td>
+                            <span style={{ position: 'absolute', right: "153px" }}>Row per page:</span>
+                            <span style={{ position: 'absolute', right: "273px" }}> Pages: 1 - 10 of 854</span>
+                        </tr>
+                    </tfoot>
                 </table>
             </div>
 
             <div className="table-mobile">
-                <div className="bg-white">
-                    <div className="top-section">
-                        <div className="img">
-                            <Image src={user} />
-                            <p className='title'>Dr. Abbas</p>
+                {
+                    userData?.map((data, index) => {
+                        return <div className="bg-white mb-4">
+                            <div className="top-section">
+                                <div className="img">
+                                    <Image src={user} />
+                                    <p className='title'>Dr. Abbas</p>
+                                </div>
+                                <div className="content">
+                                    <p className='title'>Fee: 500PKR</p>
+                                </div>
+                            </div>
+                            <div className="middle">
+                                <div className="spec">
+                                    <p className='title'>Specialization</p>
+                                    <p>Family Physician</p>
+                                </div>
+                                <div className="date">
+                                    <p className='title'>Date & Time</p>
+                                    <p>09 Dec, 2023, 4:00 PM</p>
+                                </div>
+                                <div className="rating">
+                                    <p className='title'>Rating</p>
+                                    <p>5.0</p>
+                                </div>
+                            </div>
+                            <div className="bottom">
+                                <button className='details'>View Details</button>
+                                <button className='join'>Join</button>
+                                <button className='cancel'>Cancel</button>
+                            </div>
                         </div>
-                        <div className="content">
-                            <p className='title'>Fee: 500PKR</p>
-                        </div>
-                    </div>
-                    <div className="middle">
-                        <div className="spec">
-                            <p className='title'>Specialization</p>
-                            <p>Family Physician</p>
-                        </div>
-                        <div className="date">
-                            <p className='title'>Date & Time</p>
-                            <p>09 Dec, 2023, 4:00 PM</p>
-                        </div>
-                        <div className="rating">
-                            <p className='title'>Rating</p>
-                            <p>5.0</p>
-                        </div>
-                    </div>
-                    <div className="bottom">
-                        <button className='details'>View Details</button>
-                        <button className='join'>Join</button>
-                        <button className='cancel'>Cancel</button>
-                    </div>
-                </div>
+                    })
+                }
+
             </div>
         </div>
     )

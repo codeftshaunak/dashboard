@@ -118,14 +118,12 @@ a {
   font-weight: 100;
 }
 
-.full-table {
-  /* overflow-y: hidden; */
-}
-
 .table {
-  max-width: 98%;
+  max-width: 96%;
   margin: auto;
   font-size: 0.9rem;
+  background-color: #fff;
+  padding-left: 1rem;
 }
 
 .table th {
@@ -178,6 +176,21 @@ a {
   display: none;
 }
 
+.sidebar svg {
+  color: white;
+}
+
+hr {
+  margin: 0 0;
+  color: black;
+}
+
+.page-row {
+  position: absolute;
+  right: 10px;
+  left: 0;
+}
+
 @media screen and (max-width:1124px) {
   .sidebar {
     width: 200px !important;
@@ -213,8 +226,57 @@ a {
     display: none !important;
   }
 
+  .open-navbar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 4rem;
+    bottom: 0;
+    height: 100vh;
+    color: #005B96;
+    padding: 1.5rem;
+  }
+
+  .open-navbar button {
+    border: 2px solid #005B96;
+    margin-right: 0.5rem;
+    padding: 0.3rem 0.6rem;
+    width: 100px;
+    border-radius: 5px;
+    font-weight: bolder;
+  }
+
+  .open-navbar .login {
+    background-color: white;
+    color: #005B96;
+    text-transform: capitalize;
+  }
+
+  .open-navbar .signin {
+    background-color: #005B96;
+  }
+
+  .item {
+    align-items: center;
+    height: 50px;
+    display: flex;
+  }
+
+  .item p {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+  }
+
+  .item svg {
+    color: black;
+    font-weight: 300;
+  }
+
   .mobile {
     display: flex !important;
+    background: white;
+    font-weight: 200;
   }
 
   .desktop {
@@ -233,8 +295,9 @@ a {
   .table-mobile {
     display: block;
     color: #005B96;
-    width: 90%;
+    width: 96%;
     margin: auto;
+    background-color: #F3F3F3;
   }
 
   .table-mobile img {
@@ -245,7 +308,7 @@ a {
   }
 
   .table-mobile .title {
-    font-weight: bolder;
+    font-weight: bolder !important;
   }
 
   .table-mobile .top-section {
@@ -262,12 +325,22 @@ a {
     display: flex;
     justify-content: space-between;
     border-bottom: 2px solid #005B96;
+    text-align: center;
+  }
+
+  .middle p {
+    font-weight: 200;
   }
 
   .table-mobile .top-section .img {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .table-mobile .top-section .img p {
+    padding-top: 0.6rem;
+    margin-left: 0.6rem;
   }
 
   .table-mobile .bottom {
@@ -283,8 +356,9 @@ a {
     border-radius: 5px;
     font-weight: 300;
     margin-left: 0.9rem;
-    margin-top: 0.6rem;
-    margin-bottom: 0.6rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 0.6rem;
   }
 
   .cancel {
