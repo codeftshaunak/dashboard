@@ -1,14 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
 import logo from '../assets/logo.png';
+import { AiOutlineHome } from 'react-icons/ai'
+import Navbar from './Navbar';
 
 function Sidebar() {
     return (
-        <div className="d-flex flex-column flex-shrink-0 py-3" style={{ width: '250px', height: '100vh', backgroundColor: "#011f4b" }}>
-            <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-                <svg className="bi me-2" width="40" height="32">
-                    <use xlinkHref="#bootstrap" />
-                </svg>
+        <div className="d-flex flex-column flex-shrink-0 py-3 sidebar" style={{ width: '250px', minHeight: "100vh", maxHeight: 'auto', backgroundColor: "#011f4b" }}>
+            <a href="/" className="d-flex mx-auto link-dark text-decoration-none">
                 <Image
                     src={logo}
                     alt="logo"
@@ -17,25 +16,29 @@ function Sidebar() {
                     quality={100}
                 />
             </a>
-            <hr />
+            <br />
             <ul className="nav nav-pills flex-column mb-auto text-center">
-                <li>
-                    <a href="#" className="nav-link text-white text-center">
+                <li className='d-flex justify-content-center align-items-center'>
+                    <AiOutlineHome />
+                    <a href="#" className="nav-link text-white text-center fw-bold hidetab">
                         Dashboard
                     </a>
                 </li>
-                <li>
-                    <a href="#" className="nav-link text-white">
+                <li className='d-flex justify-content-center align-items-center'>
+                    <AiOutlineHome />
+                    <a href="#" className="nav-link text-white text-center fw-bold hidetab">
                         Dashboard
                     </a>
                 </li>
-                <li>
-                    <a href="#" className="nav-link text-white">
+                <li className='d-flex justify-content-center align-items-center'>
+                    <AiOutlineHome />
+                    <a href="#" className="nav-link text-white text-center fw-bold hidetab">
                         Dashboard
                     </a>
                 </li>
-                <li>
-                    <a href="#" className="nav-link text-white">
+                <li className='d-flex justify-content-center align-items-center'>
+                    <AiOutlineHome />
+                    <a href="#" className="nav-link text-white text-center fw-bold hidetab">
                         Dashboard
                     </a>
                 </li>
